@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted | Rhino Spikers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+    
+    <div class="relative bg-gradient-to-r from-blue-500 to-teal-400 py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Application Received</h1>
+            <p class="text-xl text-white mb-8 max-w-3xl mx-auto">Thank you for your interest in Rhino Spikers!</p>
+</div>
+    </div>
+
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Application Details</h2>
+                <div id="application-details" class="grid md:grid-cols-2 gap-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Current Team Roster</h2>
+            <div id="team-roster" class="grid md:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js" type="module"></script>
+    <script type="module">
+        import TeamService from './services/teamService.js';
+// Parse URL parameters and display application details
+        const urlParams = new URLSearchParams(window.location.search);
+        const appDetails = document.getElementById('application-details');
+
+        if(urlParams.toString()) {
+            const details = [
+                { label: 'Name', value: urlParams.get('name') },
+                { label: 'Email', value: urlParams.get('email') },
+                { label: 'Phone', value: urlParams.get('phone') },
+                { label: 'Position', value: urlParams.get('position') },
+                { label: 'Experience', value: `${urlParams.get('experience')} years` },
+                { label: 'Message', value: urlParams.get('message') }
+            ];
+
+            details.forEach(detail => {
+                if(detail.value) {
+                    const div = document.createElement('div');
+                    div.className = 'bg-white p-4 rounded shadow';
+                    div.innerHTML = `
+                        <p class="text-sm text-gray-500">${detail.label}</p>
+                        <p class="font-medium">${detail.value}</p>
+                    `;
+                    appDetails.appendChild(div);
+                }
+            });
+        }
+
+        // Generate dynamic team roster
+        const roster = document.getElementById('team-roster');
+        const positions = [
+            'Outside Hitter', 'Middle Blocker', 'Opposite Hitter', 
+            'Setter', 'Libero', 'Defensive Specialist'
+        ];
+        const levels = ['Private', 'Corporal', 'Sergeant', 'Lieutenant', 'Captain'];
+        const divisions = ['A', 'B', 'C'];
+        const years = [1, 2, 3, 4, 5];
+
+        for(let i = 1; i <= 15; i++) {
+            const player = {
+                name: `Player ${i}`,
+                position: positions[Math.floor(Math.random() * positions.length)],
+                level: levels[Math.floor(Math.random() * levels.length)],
+                division: divisions[Math.floor(Math.random() * divisions.length)],
+                years: years[Math.floor(Math.random() * years.length)],
+                img: `http://static.photos/people/200x200/${i+10}`
+            };
+
+            const playerDiv = document.createElement('div');
+            playerDiv.className = 'bg-white rounded-lg shadow-md overflow-hidden';
+            playerDiv.innerHTML = `
+                <img src="${player.img}" alt="${player.name}" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold">${player.name}</h3>
+                    <div class="mt-2 text-sm">
+                        <p class="flex items-center"><i data-feather="award" class="mr-2 w-4 h-4"></i> ${player.position}</p>
+                        <p class="flex items-center"><i data-feather="star" class="mr-2 w-4 h-4"></i> ${player.level}</p>
+                        <p class="flex items-center"><i data-feather="users" class="mr-2 w-4 h-4"></i> Division ${player.division}</p>
+                        <p class="flex items-center"><i data-feather="clock" class="mr-2 w-4 h-4"></i> ${player.years} year${player.years > 1 ? 's' : ''}</p>
+                    </div>
+                </div>
+            `;
+            roster.appendChild(playerDiv);
+        }
+
+        feather.replace();
+    </script>
+</body>
+</html>

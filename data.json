@@ -1,0 +1,83 @@
+{
+    "testimonials": [
+        { "name": "Jordan Lee", "role": "Setter", "text": "The strategic training is unparalleled." },
+        { "name": "Morgan Davis", "role": "Outside Hitter", "text": "Joining this team was the best decision." }
+    ],
+"faq": [
+    { "question": "What are the practice schedules?", "answer": "Mondays and Wednesdays 6-8pm." },
+    { "question": "What's the cost to join?", "answer": "The annual fee is $1200." }
+],
+"clubHistory": [
+        {
+            "id": "founding",
+            "year": 2015,
+            "title": "Founding of Rhino Spikers",
+            "description": "The Rhino Spikers Volleyball Club was officially established in 2015 as a key initiative within the Nigerian Army's sports development program at Rukuba Barracks. The goal was to foster discipline, teamwork, and athletic excellence among military personnel through volleyball."
+        },
+        {
+            "id": "early_training",
+            "year": 2016,
+            "title": "Intensive Training & Recruitment",
+            "description": "The first year involved rigorous training camps and recruitment drives to identify talented military personnel. Coaches focused on foundational skills, physical conditioning, and strategic gameplay, building a strong core team."
+        },
+        {
+            "id": "first_competitions",
+            "year": 2017,
+            "title": "Debut in State Competitions",
+            "description": "Rhino Spikers made their debut in local and state-level competitions, quickly gaining recognition for their disciplined play and competitive spirit. This period was crucial for gaining match experience and refining team cohesion."
+        }
+    ],
+    "achievements": [
+        {
+            "id": "armed_forces_2019",
+            "year": 2019,
+            "event": "Armed Forces Games Volleyball Championship",
+            "result": "Champions",
+            "description": "Secured our first major title, showcasing the dedication and hard work of the team against top military sports units."
+        },
+        {
+            "id": "plateau_state_cup",
+            "year": 2020,
+            "event": "Plateau State Volleyball Cup",
+            "result": "Runners-Up",
+            "description": "A hard-fought season leading to a strong second-place finish, demonstrating consistent performance."
+        },
+        {
+            "id": "armed_forces_2021",
+            "year": 2021,
+            "event": "Armed Forces Games Volleyball Championship",
+            "result": "Champions",
+            "description": "Successfully defended our title, solidifying our position as a dominant force in military volleyball."
+        }
+    ],
+    "playerRoster": [
+        {
+            "id": "player_01",
+            "name": "Ahmed Musa",
+            "position": "Outside Hitter",
+            "jersey": 7,
+            "bio": "Known for his powerful spikes and exceptional court coverage, Ahmed is a key offensive player."
+        },
+        {
+            "id": "player_02",
+            "name": "Fatima Bello",
+            "position": "Setter",
+            "jersey": 3,
+            "bio": "Fatima's strategic setting and precise passes are critical to our team's offensive plays."
+        },
+        {
+            "id": "player_03",
+            "name": "Chukwuma Okoro",
+            "position": "Middle Blocker",
+            "jersey": 9,
+            "bio": "A formidable presence at the net, Chukwuma excels in blocking and quick attacks."
+        },
+        {
+            "id": "player_04",
+            "name": "Ngozi Eze",
+            "position": "Libero",
+            "jersey": 12,
+            "bio": "Ngozi's defensive prowess and excellent reception skills anchor our back row."
+        }
+    ]
+}

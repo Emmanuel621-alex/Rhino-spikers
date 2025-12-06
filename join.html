@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to join Rhino Spikers Volleyball Club – elite volleyball team for serving military personnel.">
+  <title>Rhino Spikers Volleyball Club | Join</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <script src="https://unpkg.com/feather-icons" defer></script>
+  <script src="script.js" type="module" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <header>
+    <nav class="bg-white shadow">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center">
+          <img src="https://huggingface.co/spaces/EDACHE/rhino-spikers-volleyball-club/resolve/main/images/WhatsApp%20Image%202025-12-04%20at%2014.14.46_579a4033.jpg"
+               alt="Rhino Spikers Logo" class="h-12 w-auto">
+          <span class="ml-2 font-bold text-xl">Rhino Spikers</span>
+        </a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="join.html" class="nav-link active" aria-current="page">Join</a></li>
+        </ul>
+        <button class="md:hidden mobile-menu-btn" aria-label="Toggle navigation menu">
+          <i data-feather="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="mobile-menu hidden bg-white md:hidden">
+        <ul class="flex flex-col p-4 space-y-2">
+          <li><a href="index.html" class="block">Home</a></li>
+          <li><a href="about.html" class="block">About</a></li>
+          <li><a href="join.html" class="block">Join</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-blue-500 to-teal-400 py-16 md:py-24 text-center text-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Join Our Ranks</h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">Serving military personnel can apply to join our elite volleyball team.</p>
+      </div>
+    </section>
+
+    <!-- Join Form Section -->
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden md:flex">
+          
+          <!-- Benefits Column -->
+          <div class="md:w-1/2 bg-gradient-to-b from-blue-500 to-teal-400 p-8 text-white">
+            <h2 class="text-2xl font-bold mb-4">Military Sports Benefits</h2>
+            <ul class="space-y-4 list-inside list-disc">
+              <li>Represent the Nigerian Army in national competitions</li>
+              <li>Professional coaching from military sports instructors</li>
+              <li>Access to military sports facilities and equipment</li>
+              <li>Opportunity to participate in Armed Forces Games</li>
+              <li>Enhance physical fitness and teamwork skills</li>
+            </ul>
+            <div class="mt-8">
+              <img src="http://static.photos/sport/640x360/6" alt="Team celebrating" class="rounded-lg shadow-md w-full h-auto" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Application Form Column -->
+          <div class="md:w-1/2 p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Application Form</h2>
+            <form id="join-form" action="join-results.html" method="GET" class="space-y-4">
+              
+              <div>
+                <label for="name" class="block text-gray-700 font-semibold mb-1">Full Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+              </div>
+
+              <div>
+                <label for="email" class="block text-gray-700 font-semibold mb-1">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+              </div>
+
+              <div>
+                <label for="phone" class="block text-gray-700 font-semibold mb-1">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+              </div>
+
+              <div>
+                <label for="position" class="block text-gray-700 font-semibold mb-1">Primary Position</label>
+                <select id="position" name="position" required
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+                  <option value="">Select your position</option>
+                  <option value="setter">Setter</option>
+                  <option value="outside">Outside Hitter</option>
+                  <option value="opposite">Opposite Hitter</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="experience" class="block text-gray-700 font-semibold mb-1">Years of Experience</label>
+                <input type="number" id="experience" name="experience" min="0" max="30" required
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+              </div>
+
+              <div>
+                <label for="message" class="block text-gray-700 font-semibold mb-1">Why do you want to join the Rhino Spikers?</label>
+                <textarea id="message" name="message" rows="3" required
+                          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                          placeholder="Tell us about your volleyball journey and goals..."></textarea>
+              </div>
+
+              <div class="text-right">
+                <button type="submit"
+                        class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-red-500 transition">
+                  Submit Application
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Frequently Asked Questions</h2>
+
+        <div class="space-y-4">
+          <details class="border border-gray-200 rounded-lg p-4">
+            <summary class="font-semibold cursor-pointer flex justify-between items-center">
+              What are the practice schedules?
+            </summary>
+            <p class="mt-2 text-gray-600">We practice three times a week: Mondays and Wednesdays 6-8pm, and Saturdays 9am-11am. Optional conditioning on Fridays.</p>
+          </details>
+
+          <details class="border border-gray-200 rounded-lg p-4">
+            <summary class="font-semibold cursor-pointer flex justify-between items-center">
+              What's the cost to join the team?
+            </summary>
+            <p class="mt-2 text-gray-600">The annual membership fee is $1200, covering coaching, facility rentals, tournament fees, and team equipment. Payment plans available.</p>
+          </details>
+
+          <details class="border border-gray-200 rounded-lg p-4">
+            <summary class="font-semibold cursor-pointer flex justify-between items-center">
+              What's the commitment level expected?
+            </summary>
+            <p class="mt-2 text-gray-600">Players are expected to attend at least 80% of practices and all scheduled tournaments. Dedication is essential.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="md:flex md:justify-between md:items-start mb-4">
+        <div>
+          <h3 class="font-bold text-lg">Rhino Spikers</h3>
+          <p>Official volleyball team of the Nigerian Army from Rukuba Barracks.</p>
+          <div class="flex space-x-4 mt-2">
+            <a href="#" aria-label="Facebook" class="hover:text-red-500"><i data-feather="facebook"></i></a>
+            <a href="#" aria-label="Instagram" class="hover:text-red-500"><i data-feather="instagram"></i></a>
+            <a href="#" aria-label="Twitter" class="hover:text-red-500"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+        <address class="not-italic mt-4 md:mt-0">
+          <p>Officers Mess, Rukuba Barracks, Plateau State</p>
+          <p>Email: <a href="mailto:rhinospikers@gmail.com" class="underline">rhinospikers@gmail.com</a></p>
+          <p>Phone: <a href="tel:08104266274" class="underline">08104266274</a></p>
+        </address>
+      </div>
+      <div class="text-center text-sm">
+        <p>&copy; 2023 Rhino Spikers. Nigerian Army Volleyball Team.</p>
+        <p>WDD231 Final Project - Emmanuel Edache</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+  </script>
+
+</body>
+</html>
