@@ -3,36 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rhino Spikers Volleyball Club | Home - Representing the Nigerian Army with strength, discipline, and teamwork.">
+  <meta name="description" content="Rhino Spikers Volleyball Club | Representing the Nigerian Army with strength, discipline, and teamwork.">
   <title>Rhino Spikers Volleyball Club | Home</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com" defer></script>
+  
+  <!-- Feather Icons -->
   <script src="https://unpkg.com/feather-icons" defer></script>
+
+  <!-- Custom Components -->
   <script src="components/nav.js" defer></script>
   <script src="components/achievements-list.js" defer></script>
-  <script src="script.js" type="module" defer></script>
+
+  <!-- Main Script -->
+  <script src="script.js" type="module"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
 
+  <!-- Header & Navigation -->
   <header>
     <nav class="bg-white shadow">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <a href="index.html" class="flex items-center">
-          <img src="https://huggingface.co/spaces/EDACHE/rhino-spikers-volleyball-club/resolve/main/images/WhatsApp%20Image%202025-12-04%20at%2014.14.46_579a4033.jpg"
+          <img src="https://huggingface.co/spaces/EDACHE/rhino-spikers-volleyball-club/resolve/main/images/WhatsApp%20Image%202025-12-04%20at%2014.14.46_579a4033.jpg" 
                alt="Rhino Spikers Logo" class="h-12 w-auto">
           <span class="ml-2 font-bold text-xl">Rhino Spikers</span>
         </a>
-        <ul class="hidden md:flex space-x-6">
+
+        <ul class="hidden md:flex space-x-6" role="menubar">
           <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="join.html" class="nav-link">Join</a></li>
         </ul>
+
         <button class="md:hidden mobile-menu-btn" aria-label="Toggle navigation menu">
           <i data-feather="menu" class="w-6 h-6"></i>
         </button>
       </div>
+
+      <!-- Mobile Menu -->
       <div class="mobile-menu hidden bg-white md:hidden">
-        <ul class="flex flex-col p-4 space-y-2">
+        <ul class="flex flex-col p-4 space-y-2" role="menu">
           <li><a href="index.html" class="block">Home</a></li>
           <li><a href="about.html" class="block">About</a></li>
           <li><a href="join.html" class="block">Join</a></li>
@@ -44,7 +59,7 @@
   <main>
     <!-- Hero Section -->
     <section class="relative bg-cover bg-center py-16 md:py-32" 
-             style="background-image: url('https://huggingface.co/spaces/EDACHE/rhino-spikers-volleyball-club/resolve/main/images/WhatsApp%20Image%202025-12-04%20at%2014.38.37_6aeea4d9.jpg')">
+             style="background-image: url('https://huggingface.co/spaces/EDACHE/rhino-spikers-volleyball-club/resolve/main/images/WhatsApp%20Image%202025-12-04%20at%2014.38.37_6aeea4d9.jpg');">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-50 rounded-lg py-8">
         <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">Strength. Discipline. Teamwork.</h1>
         <p class="text-xl text-white mb-8 max-w-3xl mx-auto font-medium drop-shadow-lg">
@@ -104,8 +119,10 @@
     </div>
   </footer>
 
+  <!-- Feather Icons Init -->
   <script>
     feather.replace();
   </script>
+
 </body>
 </html>
